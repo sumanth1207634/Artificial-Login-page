@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function redirectToHome() {
+      // Simulate successful login, then redirect
+      alert("Login successful!");
+      window.location.href = "home.html";
+      return false; // Prevent form submission (remove this line if you want to submit the form)
+    }
+  </script>
 </head>
 <body>
   <div class="login-container">
-    <form class="login-form" action="process-login.php" method="post">
+    <form class="login-form" action="process-login.php" method="post" onsubmit="return redirectToHome()">
       <h2>Login</h2>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
